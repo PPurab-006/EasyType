@@ -29,3 +29,11 @@ env/
 .idea/
 .DS_Store
 Thumbs.db
+node_modules/
+easytype-vscode-extension/node_modules/
+easytype-vscode-extension/node_modules/
+easytype-vscode-extension/out/
+easytype-vscode-extension/node_modules/
+easytype-vscode-extension/out/
+easytype-vscode-extension/easytype-language-1.0.0.vsix
+easytype-vscode-extension/node_modules

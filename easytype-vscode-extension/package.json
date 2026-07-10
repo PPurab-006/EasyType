@@ -1,0 +1,69 @@
+{
+  "name": "easytype-language",
+  "displayName": "EasyType",
+  "description": "A beginner-friendly English-syntax language that transpiles to Python.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "icon": "images/icon.png",
+  "contributes": {
+    "languages": [
+      {
+        "id": "easytype",
+        "aliases": [
+          "EasyType",
+          "easytype"
+        ],
+        "extensions": [
+          ".esy"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "easytype",
+        "scopeName": "source.esy",
+        "path": "./syntaxes/easytype.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "easytype.run",
+        "title": "EasyType: Run File",
+        "icon": "$(play)"
+      },
+      {
+        "command": "easytype.runDebug",
+        "title": "EasyType: Run with Debug"
+      }
+    ],
+    "menus": {
+      "editor/title/run": [
+        {
+          "command": "easytype.run",
+          "when": "resourceExtname == .esy",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:easytype"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  }
+}
