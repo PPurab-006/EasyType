@@ -1,0 +1,83 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "EasyType",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#actions"
+    },
+    {
+      "include": "#numbers"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "begin": "\\*",
+          "end": "\\*",
+          "name": "comment.block.easytype"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.easytype",
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escape.easytype"
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(if|what-if|else|repeat|times|while)\\b",
+          "name": "keyword.control.easytype"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "match": "\\b(equals|plus|minus|times|divided-by|power|remainder\\s+of|percent\\s+of|more-than|less-than|and|or)\\b",
+          "name": "keyword.operator.easytype"
+        }
+      ]
+    },
+    "actions": {
+      "patterns": [
+        {
+          "match": "\\b(type|ask|list|position|insert|remove|size|at|in|from|of|number|decimal)\\b",
+          "name": "support.function.easytype"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b\\d+(\\.\\d+)?\\b",
+          "name": "constant.numeric.easytype"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.esy"
+}
