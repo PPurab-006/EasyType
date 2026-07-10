@@ -42,3 +42,6 @@ repeat 3 times
 repeat while counter less-than 5
     counter equals counter plus 1
     type "While loop count:", counter
+
+* Inline List Test *
+type "Here is an inline list:", list 1, 2, 3
