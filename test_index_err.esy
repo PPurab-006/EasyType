@@ -1,0 +1,3 @@
+* Index Error Test *
+scores equals list 10, 20
+type "Missing:", position 5 in scores

@@ -1,0 +1,47 @@
+* Variables and Math *
+x equals 5
+y equals 10
+result equals x plus y
+type "Result of 5 plus 10:", result
+
+* Percentage *
+tip equals 15 percent of 200
+type "15 percent of 200 is", tip
+
+* Power *
+squared equals 3 power 2
+type "3 squared is", squared
+
+* Control Flow *
+if result more-than 10
+    type "Result is big!"
+what-if result equals 10
+    type "Result is exactly 10!"
+else
+    type "Result is small."
+
+* Lists *
+scores equals list 10, 20, 30
+type "Scores:", scores
+type "Size of scores:", size of scores
+
+type "First score:", position 1 in scores
+
+insert 99 at position 2 in scores
+type "After insert at position 2:", scores
+
+remove position 3 from scores
+type "After remove position 3 (which was 20):", scores
+
+* Loops *
+counter equals 0
+repeat 3 times
+    counter equals counter plus 1
+    type "Loop count:", counter
+
+repeat while counter less-than 5
+    counter equals counter plus 1
+    type "While loop count:", counter
+
+* Inline List Test *
+type "Here is an inline list:", list 1, 2, 3

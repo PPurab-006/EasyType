@@ -1,0 +1,10 @@
+* Simple Game Logic *
+score equals 0
+repeat 3 times
+    score equals score plus 10
+    type "Score is now:", score
+
+if score more-than 20
+    type "You win!"
+else
+    type "Keep trying!"

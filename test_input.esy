@@ -1,0 +1,4 @@
+name equals ask "What is your name? "
+age equals ask number "Age? "
+price equals ask decimal "Price? "
+type "Name:", name, "Age:", age, "Price:", price
