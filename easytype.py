@@ -1,5 +1,7 @@
 import sys
 import re
+import ast
+import io
 
 def transpile_line(line):
     # Skip empty lines
